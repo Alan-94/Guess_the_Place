@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ScoreboardFragment"
+    android:background="@drawable/background_image_scoreboard"
+    tools:ignore="PrivateResource">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_marginTop="10dp"
+            app:backgroundTint="@android:color/transparent"
+            android:textColor="@color/cardview_light_background"
+            android:id="@+id/buttonReturn"
+            android:textSize="28sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/restart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nestedScrollView" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:textColor="@color/cardview_light_background"
+        android:layout_height="wrap_content"
+        android:text="@string/scoreboard"
+        android:id="@+id/title"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonReturn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"/>
+
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintBottom_toTopOf="@+id/nestedScrollView">
+
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:textColor="@color/cardview_light_background"
+                    android:id="@+id/number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/no"
+                    android:textAllCaps="true"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textColor="@color/cardview_light_background"
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/nameTable"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:textColor="@color/cardview_light_background"
+                    android:id="@+id/level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lvl"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/name"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/score"
+                    android:textColor="@color/cardview_light_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/scoreTable"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@+id/level"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"/>
+            </TableRow>
+        </TableLayout>
+
+        <ScrollView
+            android:layout_margin="20dp"
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:textColor="@color/cardview_light_background"
+            android:background="#55000000"
+            app:layout_constraintBottom_toTopOf="@+id/buttonReturn"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+
+            tools:ignore="PrivateResource">
+
+
+            <TableLayout
+                app:backgroundTint="@android:color/transparent"
+                android:id="@+id/scoresTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

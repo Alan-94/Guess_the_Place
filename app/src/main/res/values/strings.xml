@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GuessThePlace</string>
+    <string name="name">Name</string>
+    <string name="play">Play</string>
+    <string name="description">- Check the photo of the place\n- Point to the place\n- If Your pointer is close enough to the actual location, You proceed to the next round\n- The smaller the distance to the location, the more points You get\n- Complete 10 levels to win the game</string>
+    <string name="restart">Restart</string>
+    <string name="scoreboard">Scoreboard</string>
+    <string name="no">no.</string>
+    <string name="nameTable">name</string>
+    <string name="lvl">lvl</string>
+    <string name="scoreTable">score</string>
+    <string name="gameTitle">Guess the Place</string>
+    <string name="nextButton">Next</string>
+    <string name="scoreText">Score</string>
+    <string name="coords">Coords</string>
+    <string name="final_score">Final Score</string>
+</resources>
